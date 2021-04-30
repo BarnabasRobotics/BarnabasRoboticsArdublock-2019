@@ -175,6 +175,12 @@ public class Context
 		
 		Workspace workspace = workspaceController.getWorkspace();
 		Page page = workspace.getPageNamed("Main");
+
+		//- set how zoomed in the workspace is.
+	        //- < 1 = zoomed in, > 1 = zoomed out
+		Page.setZoomLevel(2.5);
+		System.out.println("Zoom level: " + Page.getZoomLevel());
+	        
 		
 		FactoryManager manager = workspace.getFactoryManager();
 		Block newBlock;
